@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Assam | Hackathon Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Assam<span>Tourism</span></div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#destinations">Destinations</a>
+            <button onclick="toggleDashboard()" class="btn-dash">My Bookings</button>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Explore the Land of the <br><span>One-Horned Rhino</span></h1>
+            <p>Experience the tea gardens, ancient temples, and river islands.</p>
+            <a href="#destinations" class="btn-primary">View Destinations</a>
+        </div>
+    </section>
+
+    <section id="destinations" class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <div id="places-grid" class="grid">
+            </div>
+    </section>
+
+    <div id="dashboard" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleDashboard()">&times;</span>
+            <h2>My Saved Trips</h2>
+            <hr>
+            <ul id="booking-list"></ul>
+            <button onclick="clearBookings()" class="btn-clear">Clear All History</button>
+        </div>
+    </div>
+<section id="contact" class="container">
+    <h2 class="section-title">Official Inquiries</h2>
+    <div class="contact-card">
+        <p>For official tour permits or circuit information, please contact the <b>Assam Tourism Development Corporation (ATDC)</b>.</p>
+        <div class="contact-info">
+            <p>📧 Email: directorate-tourism@assam.gov.in</p>
+            <p>📞 Helpline: +91-361-2633654</p>
+            <p>📍 Address: Asom Paryatan Bhawan, Paltan Bazar, Guwahati</p>
+        </div>
+    </div>
+</section>
+    <footer>
+        <p>&copy; 2026 Awesome Assam - Hackathon Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

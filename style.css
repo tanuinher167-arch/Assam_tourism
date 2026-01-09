@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #0E2807;    /* Deep Forest Green */
+    --accent: #B8860B;     /* Muga Silk Gold */
+    --bg-light: #F9F7F2;   /* Soft Paper/Beige */
+    --card-bg: #FFFFFF;
+    --text-dark: #1A1A1A;
+    --text-muted: #576352;
+    --radius: 24px;        /* Modern Rounded Corners */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Premium Header --- */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 8%; background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px); position: fixed; width: 100%; top: 0; z-index: 1000;
+}
+
+.logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary); }
+.logo span { color: var(--accent); }
+
+.nav-links a {
+    text-decoration: none; color: var(--text-dark); margin-left: 30px;
+    font-weight: 600; font-size: 0.9rem; transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent); }
+
+/* --- Hero Section (Bento Style) --- */
+.hero {
+    height: 70vh; padding: 120px 8% 40px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif; font-size: 4.5rem;
+    color: var(--primary); margin-bottom: 20px;
+}
+
+/* --- Bento Grid Layout --- */
+.container { padding: 40px 8%; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s;
+    display: flex; flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(14, 40, 7, 0.1);
+}
+
+.card img {
+    width: 100%; height: 280px; object-fit: cover;
+    border-radius: calc(var(--radius) - 5px);
+    margin-bottom: 20px;
+}
+
+.card-content h3 {
+    font-family: 'Playfair Display', serif; font-size: 1.5rem;
+    margin-bottom: 10px; color: var(--primary);
+}
+
+.city-tag {
+    display: inline-block; padding: 4px 12px;
+    background: #E8F0E5; color: var(--primary);
+    font-size: 0.75rem; font-weight: 700; border-radius: 50px;
+    margin-bottom: 10px; text-transform: uppercase;
+}
+
+.btn-book {
+    margin-top: auto; padding: 15px;
+    background: var(--primary); color: white;
+    border: none; border-radius: 16px; font-weight: 600;
+    cursor: pointer; transition: 0.3s;
+}
+
+.btn-book:hover { background: var(--accent); }
+
+/* --- Official Contact Section --- */
+.contact-card {
+    background: var(--primary); color: white;
+    padding: 60px; border-radius: var(--radius);
+    text-align: center; margin-top: 50px;
+}
+
+.contact-card h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
